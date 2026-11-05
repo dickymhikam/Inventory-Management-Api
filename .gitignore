@@ -1,0 +1,25 @@
+# Environment
+.env
+.env.*
+
+# Go build
+/bin/
+/build/
+*.exe
+*.test
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database backup
+*.sql.gz
+*.dump
+*.bak
