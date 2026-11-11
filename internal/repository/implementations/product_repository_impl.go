@@ -31,7 +31,7 @@ func (repository *productRepository) Update(
 	tx *gorm.DB,
 	product *model.Products,
 )error {
-	return tx.WithContext(ctx).Save(product).Error
+	return tx.WithContext(ctx).Updates(product).Error
 }
 
 func (repository *productRepository) Delete(
