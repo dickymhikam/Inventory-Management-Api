@@ -31,7 +31,7 @@ func (repository *movementRepository) Update(
 	tx *gorm.DB,
 	movement *model.Movements,
 ) error {
-	return tx.WithContext(ctx).Save(movement).Error
+	return tx.WithContext(ctx).Updates(movement).Error
 }
 
 func (repository *movementRepository) Delete(
