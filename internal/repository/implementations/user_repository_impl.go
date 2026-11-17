@@ -31,7 +31,7 @@ func (repository *userRepository) Update(
 	tx *gorm.DB,
 	user *model.Users,
 ) error {
-	return tx.WithContext(ctx).Save(user).Error
+	return tx.WithContext(ctx).Updates(user).Error
 }
 
 func (repository *userRepository) FindByID(

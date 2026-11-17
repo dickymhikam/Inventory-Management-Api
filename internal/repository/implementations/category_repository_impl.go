@@ -31,7 +31,7 @@ func (repository *categoryRepository) Update (
 	tx *gorm.DB,
 	category *model.Categories,
 ) error {
-	return tx.WithContext(ctx).Save(category).Error
+	return tx.WithContext(ctx).Updates(category).Error
 }
 
 func (repository *categoryRepository) Delete (
