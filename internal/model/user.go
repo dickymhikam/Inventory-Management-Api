@@ -8,5 +8,5 @@ type Users struct {
 	Email     string `gorm:"column:email;size:150;not null;unique"`
 	Password  string `gorm:"column:password;size:225;not null"`
 	CreatedAt time.Time `gorm:"column:created_at;autoCreateTime"`
-	Movement []Movements `gorm:"foreignKey:user_id;references:id"`
+	Movement []Movements `gorm:"foreignKey:UserID;references:id"`
 }

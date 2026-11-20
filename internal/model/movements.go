@@ -9,6 +9,6 @@ type Movements struct {
 	Type      string    `gorm:"type:enum('IN','OUT');not null"`
 	Quantity  int       `gorm:"not null"`
 	CreatedAt time.Time `gorm:"column:created_at;autoCreateTime"`
-	Product   Products  `gorm:"foreignKey:product_id;references:id"`
-	User      Users     `gorm:"foreignKey:user_id;references:id"`
+	Product   Products  `gorm:"foreignKey:ProductID;references:id"`
+	User      Users     `gorm:"foreignKey:UserID;references:id"`
 }

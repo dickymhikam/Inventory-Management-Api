@@ -7,5 +7,5 @@ type Categories struct {
 	Name        string `gorm:"column:name;size:100;not null;unique"`
 	Description string `gorm:"column:description"`
 	CreatedAt   time.Time `gorm:"column:created_at;autoCreateTime"`
-	Product 	[]Products `gorm:"foreignKey:category_id;references:id"`
+	Product 	[]Products `gorm:"foreignKey:CategoryID;references:id"`
 }
